@@ -1,0 +1,31 @@
+ALGORITHM algo_project
+VAR
+    nb_sp, nb_v, i : INTEGER :=0 ;
+    s : STRING ;
+BEGIN
+
+    read(s);
+
+WHILE (s[i] != ".") DO
+
+        IF (s[i] == " ") THEN
+
+            nb_sp = nb_sp + 1;
+
+        ELSE_IF (s[i] in ["a","A", "e", "E", "o", "O", "y", "Y" "u","U" "i", "I" ]) THEN
+            
+            nb_v = nb_v + 1 ;
+
+        ELSE
+   
+        END_IF
+  
+    i = i + 1;
+
+END_WHILE
+
+    write("The number of words in the sentence :", i - (nb_sp + 1) );
+    write("The length of the sentence :", i );
+    write("The number of vowels in the sentence :", nb_v );
+
+END 
